@@ -49,7 +49,17 @@
                 "organizations:DetachPolicy",
                 "organizations:ListTagsForResource",
                 "organizations:TagResource",
-                "organizations:UntagResource"
+                "organizations:UntagResource",
+                "resource-explorer-2:CreateIndex",
+                "resource-explorer-2:GetIndex",
+                "resource-explorer-2:ListIndexes",
+                "resource-explorer-2:UpdateIndexType",
+                "resource-explorer-2:CreateView",
+                "resource-explorer-2:GetView",
+                "resource-explorer-2:ListViews",
+                "resource-explorer-2:AssociateDefaultView",
+                "resource-explorer-2:GetDefaultView",
+                "account:ListRegions"
             ],
             "Resource": "*"
         },
@@ -71,6 +81,17 @@
                     "iam:PassedToService": "lambda.amazonaws.com"
                 }
             }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:DeleteRole",
+                "iam:DeleteRolePolicy",
+                "iam:TagRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/P0RoleIamResourceLister"
         }
     ]
 }
